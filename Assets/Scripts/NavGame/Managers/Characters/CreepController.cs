@@ -23,6 +23,11 @@ public class CreepController : CombatGameObject
 
     protected override void Update()
     {
+        base.Update();
+        if (finalTarget == null)
+        {
+            return;
+        }
         if (IsInTouch(finalTarget))
         {
             AttackOnCooldown(finalTarget);
