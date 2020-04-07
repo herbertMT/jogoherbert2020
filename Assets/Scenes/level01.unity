@@ -804,6 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92a5f011ca69c948902dbb8d88fa05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   walkableLayer:
     serializedVersion: 2
@@ -1306,11 +1307,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be723a16bbb21642ba50b9fb74966cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 1.54
   defenseStats:
     maxHealth: 100
     armor: 1
   currentHealth: 0
+  damageTransform: {fileID: 0}
 --- !u!114 &2021011382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,10 +1415,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b494d074650a742a65b03bdc99c829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   ofenseStats:
     damage: 10
     attackSpeed: 1
+  attackRange: 4
   enemyLayers:
   - Creep
   enemiesToAttack: []
@@ -1629,11 +1634,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be723a16bbb21642ba50b9fb74966cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angularSpeed: 6
   contactRadius: 0.5
   defenseStats:
     maxHealth: 100
     armor: 1
   currentHealth: 0
+  damageTransform: {fileID: 0}
 --- !u!114 &6798865992683076274
 MonoBehaviour:
   m_ObjectHideFlags: 0
