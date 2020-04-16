@@ -992,6 +992,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418453376}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1590199523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590199524}
+  m_Layer: 0
+  m_Name: DamagePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1590199524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590199523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021011378}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641064465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,6 +1197,36 @@ MonoBehaviour:
   badWaves: 3
   waitTimeFirstWave: 2
   waitTimeBetweenWaves: 4
+--- !u!1 &1800230275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800230276}
+  m_Layer: 0
+  m_Name: DamagePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1800230276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800230275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1883701149796276465}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971813099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1306,7 @@ GameObject:
   - component: {fileID: 2021011379}
   - component: {fileID: 2021011381}
   - component: {fileID: 2021011382}
+  - component: {fileID: 2021011383}
   m_Layer: 0
   m_Name: Nexus
   m_TagString: Finish
@@ -1266,6 +1327,7 @@ Transform:
   m_Children:
   - {fileID: 1418453377}
   - {fileID: 545866483}
+  - {fileID: 1590199524}
   m_Father: {fileID: 1641064466}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1325,7 +1387,7 @@ MonoBehaviour:
     maxHealth: 100
     armor: 1
   currentHealth: 0
-  damageTransform: {fileID: 0}
+  damageTransform: {fileID: 1590199524}
 --- !u!114 &2021011382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,6 +1403,23 @@ MonoBehaviour:
   healthUIPrefab: {fileID: 2795850851817078619, guid: 90264e0186bd3dc4f848e54239e8ea8c,
     type: 3}
   healthPosition: {fileID: 545866483}
+--- !u!114 &2021011383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021011377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d120f72b7d846747a748c6815cdfb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSound: splash-hit2
+  dieSound: splash-death1
+  damageEffects: {fileID: 7283611308355186184, guid: bcc6c4f74af94e74787e38295a7e2456,
+    type: 3}
+  dieEffect: {fileID: 0}
 --- !u!4 &571132806743974136
 Transform:
   m_ObjectHideFlags: 0
@@ -1370,6 +1449,7 @@ GameObject:
   - component: {fileID: 4728520084178799230}
   - component: {fileID: 6798865992683076274}
   - component: {fileID: 1883701149796276432}
+  - component: {fileID: 1883701149796276434}
   m_Layer: 0
   m_Name: Infantry
   m_TagString: Untagged
@@ -1449,6 +1529,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1883701149796276434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883701149796276429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d120f72b7d846747a748c6815cdfb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSound: splash-hit1
+  dieSound: 
+  damageEffects: {fileID: 7283611308355186184, guid: bcc6c4f74af94e74787e38295a7e2456,
+    type: 3}
+  dieEffect: {fileID: 0}
 --- !u!4 &1883701149796276465
 Transform:
   m_ObjectHideFlags: 0
@@ -1462,6 +1559,7 @@ Transform:
   m_Children:
   - {fileID: 1883701150098996861}
   - {fileID: 571132806743974136}
+  - {fileID: 1800230276}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1652,7 +1750,7 @@ MonoBehaviour:
     maxHealth: 100
     armor: 1
   currentHealth: 0
-  damageTransform: {fileID: 0}
+  damageTransform: {fileID: 1800230276}
 --- !u!114 &6798865992683076274
 MonoBehaviour:
   m_ObjectHideFlags: 0

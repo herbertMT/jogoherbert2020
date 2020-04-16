@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 5455801898566745882}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4894594051605933354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 537035112817158577}
+  m_Layer: 0
+  m_Name: DamagePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &537035112817158577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894594051605933354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5455801898566745882}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5455801898328643985
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +167,7 @@ GameObject:
   - component: {fileID: 1156779871878638997}
   - component: {fileID: 1137381306451713369}
   - component: {fileID: 9103370682074257345}
+  - component: {fileID: 4958728684919193522}
   m_Layer: 0
   m_Name: Creep
   m_TagString: Untagged
@@ -157,6 +188,7 @@ Transform:
   m_Children:
   - {fileID: 5455801898328643990}
   - {fileID: 6232899006879041299}
+  - {fileID: 537035112817158577}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,7 +218,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.38
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -213,7 +245,7 @@ MonoBehaviour:
   angularSpeed: 6
   contactRadius: 0.5
   ofenseStats:
-    damage: 10
+    damage: 4
     attackSpeed: 1
   attackRange: 4
   enemyLayers:
@@ -237,6 +269,7 @@ MonoBehaviour:
     maxHealth: 100
     armor: 1
   currentHealth: 0
+  damageTransform: {fileID: 537035112817158577}
 --- !u!114 &1137381306451713369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +298,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4958728684919193522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455801898566745894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d120f72b7d846747a748c6815cdfb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSound: splash-hit2
+  dieSound: splash-death2
+  damageEffects: {fileID: 7283611308355186184, guid: bcc6c4f74af94e74787e38295a7e2456,
+    type: 3}
+  dieEffect: {fileID: 0}
 --- !u!1 &5455801899419462870
 GameObject:
   m_ObjectHideFlags: 0
