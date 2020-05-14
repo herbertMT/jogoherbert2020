@@ -2177,7 +2177,7 @@ MonoBehaviour:
   - {fileID: 1187256815}
   - {fileID: 2097333147}
   - {fileID: 1272677193}
-  actionsCost:
+  actionCosts:
   - {fileID: 2030390747}
   - {fileID: 663508881}
   - {fileID: 284028549}
