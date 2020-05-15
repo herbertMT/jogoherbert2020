@@ -8,7 +8,7 @@ public class Level01Manager : LevelManager
    public Transform [] badSpawm;
    public GameObject badPrefabs;
    public int badWaves = 3;
-    public int monstersPerWave = 2;
+   public int monstersPerWave = 2;
    public float waitTimeFirstWave = 2f;
    public float waitTimeBetweenWaves = 4f;
 
@@ -23,7 +23,16 @@ public class Level01Manager : LevelManager
 
     protected override IEnumerator SpawnBad()
    {
-       yield return new WaitForSeconds(waitTimeFirstWave);
+        float wait = waitTimeFirstWave;
+        while (wait > 0)
+        {
+            if (onWaveCountdown != null)
+            {
+                onWaveCountdown(wait);
+            }
+            wait -= Time.deltaTime;
+            yield return null;
+        }
        for (int i = 0; i < badWaves; i++)
        {
             for (int j = 0; j < badSpawm.Length; j++)
