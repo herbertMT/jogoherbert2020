@@ -105,7 +105,7 @@ MonoBehaviour:
     damage: 10
     attackSpeed: 1
   attackRange: 6
-  attackDelay: 0.5
+  attackDelay: 0.9
   castTransform: {fileID: 5450179754316978031}
   enemyLayers:
   - Creep
